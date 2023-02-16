@@ -1,4 +1,3 @@
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import React, { useState, useEffect } from "react";
@@ -7,7 +6,6 @@ import ListHeaders from "./components/ListHeaders";
 import Search from "./components/Search";
 
 function App() {
-
   const [movies, setMovies] = useState([]);
   // const [searchMovie, setSearchMovie] = useState('');
   const [randomMovie, setRandomMovie] = useState({});
@@ -19,31 +17,30 @@ function App() {
     const responseJson = await response.json();
 
     console.log(responseJson);
-    setMovies(responseJson.Search);
-  };
+    setMovies(responseJson);
 
-  const getRandomMovie = (array) => {
-    const randomMovie = array[Math.floor(Math.random() * array.length)];
+    const randomMovie =
+      responseJson.array.map[Math.floor(Math.random() * responseJson.length)];
+      
+    console.log(randomMovie);
     setRandomMovie(randomMovie);
-  }
+  };
 
   useEffect(() => {
     getMovieRequest();
-    // getRandomMovie();
   }, []);
 
   return (
     <div className="container-fluid movie-app">
       <div className="row">
-       <ListHeaders headers="movies"/>
+        <ListHeaders headers="movies" />
       </div>
       <div className="row">
         <MovieList movies={movies} />
       </div>
       <Search />
-
     </div>
   );
-};
+}
 
 export default App;
