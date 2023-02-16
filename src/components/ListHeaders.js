@@ -1,6 +1,6 @@
 import React from "react";
 
-const MovieHeaders =(props) => {
+const ListHeaders =(props) => {
     return (
         <div className="col-1">
             <h1>{props.headers}</h1>

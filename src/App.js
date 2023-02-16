@@ -4,6 +4,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import MovieList from "./components/MovieList";
 import ListHeaders from "./components/ListHeaders";
+import Search from "./components/Search";
 
 const App = () => {
 
@@ -26,8 +27,9 @@ const App = () => {
 
   return (
     <div className="container-fluid movie-app">
-      <div className="row">
+      <div className="row d-flex align-items-center mt-6 mb-3">
        <ListHeaders headers="movies"/>
+       <Search searchMovie={searchMovie} setSearchMovie={setSearchMovie} />
       </div>
       <div className="row">
         <MovieList movies={movies} />
@@ -36,4 +38,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App; 
