@@ -4,11 +4,13 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import MovieList from "./components/MovieList";
 import ListHeaders from "./components/ListHeaders";
+import Search from "./components/Search";
 
-const App = () => {
+function App() {
 
   const [movies, setMovies] = useState([]);
-  const [searchMovie, setSearchMovie] = useState('');
+  // const [searchMovie, setSearchMovie] = useState('');
+  const [randomMovie, setRandomMovie] = useState({});
 
   const getMovieRequest = async () => {
     const url = "http://www.omdbapi.com/?s=star wars&apikey=91ef3dfe";
@@ -20,8 +22,14 @@ const App = () => {
     setMovies(responseJson.Search);
   };
 
+  const getRandomMovie = (array) => {
+    const randomMovie = array[Math.floor(Math.random() * array.length)];
+    setRandomMovie(randomMovie);
+  }
+
   useEffect(() => {
     getMovieRequest();
+    // getRandomMovie();
   }, []);
 
   return (
@@ -32,6 +40,8 @@ const App = () => {
       <div className="row">
         <MovieList movies={movies} />
       </div>
+      <Search />
+
     </div>
   );
 };
