@@ -15,13 +15,15 @@ function App() {
 
     const response = await fetch(url);
     const responseJson = await response.json();
+    let newMovies = JSON.parse(responseJson);
 
-    console.log(responseJson);
+
+    console.log(newMovies);
     setMovies(responseJson);
 
     const randomMovie =
       responseJson.array.map[Math.floor(Math.random() * responseJson.length)];
-      
+
     console.log(randomMovie);
     setRandomMovie(randomMovie);
   };
