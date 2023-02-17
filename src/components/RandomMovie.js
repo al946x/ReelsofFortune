@@ -1,4 +1,6 @@
 import React from "react";
+import MovieList from "./MovieList";
+import Search from "./Search";
 
 function RandomMovie(props) {
     const movies = props.movies;
@@ -12,3 +14,5 @@ function RandomMovie(props) {
             <Search randomMovie={props.randomMovie} movieRequest={props.getMovieRequest} />
     )
 }
+
+export default RandomMovie;
