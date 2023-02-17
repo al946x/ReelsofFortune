@@ -1,9 +1,13 @@
+import {Routes, Route} from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import MovieList from "./components/MovieList";
 import ListHeaders from "./components/ListHeaders";
 import Search from "./components/Search";
+import Header from "./components/Header";
+import Favourites from "./pages/Favourites";
+import Contact from "./pages/Contact";
 
 function App() {
   const [movies, setMovies] = useState();
@@ -20,6 +24,7 @@ function App() {
 
     
     setMovies(responseJson);
+    console.log(responseJson);
 
     const newRandomMovie =
       responseJson.Search[Math.floor(Math.random() * responseJson.Search.length)];
@@ -37,16 +42,28 @@ function App() {
   return (
     <div className="container-fluid movie-app">
       <div className="row">
-        <ListHeaders headers="movies" />
+        <Header />
+        {/* <ListHeaders headers="movies" /> */}
       </div>
       <div className="row">
-      { movies ? 
+      <Routes>
+        <Route path="/" element={<App />}>
+        
+            { movies ? 
 
-      <MovieList movies={movies} poster={randomMovie.Poster} />
+            <MovieList movies={movies} movieTitle={randomMovie.Title} poster={randomMovie.Poster} year={randomMovie.Year} />
 
-      : <p>Loading</p> }
+            : <p>Loading</p> }
+            <Search randomMovie={randomMovie} movieRequest={getMovieRequest} />
+
+        </Route>
+
+        <Route path="/favourites" element={<Favourites />}></Route>
+
+        <Route path="/contact" element={<Contact />}></Route>
+      </Routes>
+
       </div>
-      <Search randomMovie={randomMovie} movieRequest={getMovieRequest} />
     </div>
   );
 }
