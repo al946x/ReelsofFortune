@@ -1,11 +1,19 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 
-const Search = {props} => {
+function Search(props) {
+
+  const [randomMovie, randomSearchMovie] = useState({});
+
+
+  function randomButton() {
+    // let movies = math.random.length
+  }
+
+
     return(
         <div className='col col-sm-5'>
-          <input className='form-control' placeholder='Search' >
-
-          </input>
+          <button>Randomise!</button>
 
         </div>
     )
