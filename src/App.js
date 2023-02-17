@@ -8,6 +8,7 @@ import Search from "./components/Search";
 import Header from "./components/Header";
 import Favourites from "./pages/Favourites";
 import Contact from "./pages/Contact";
+import RandomMovie from "./components/RandomMovie";
 
 function App() {
   const [movies, setMovies] = useState();
@@ -48,14 +49,7 @@ function App() {
       <div className="row">
       <Routes>
         <Route path="/" element={<App />}>
-        
-            { movies ? 
-
-            <MovieList movies={movies} movieTitle={randomMovie.Title} poster={randomMovie.Poster} year={randomMovie.Year} />
-
-            : <p>Loading</p> }
-            <Search randomMovie={randomMovie} movieRequest={getMovieRequest} />
-
+          <RandomMovie movies={movies} randomMovie={randomMovie} movieRequest={getMovieRequest} />
         </Route>
 
         <Route path="/favourites" element={<Favourites />}></Route>
