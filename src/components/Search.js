@@ -3,17 +3,16 @@ import { useState, useEffect } from 'react';
 
 function Search(props) {
 
-  const [randomMovie, randomSearchMovie] = useState({});
 
 
   function randomButton() {
-    // let movies = math.random.length
+    props.movieRequest()
   }
 
 
     return(
         <div className='col col-sm-5'>
-          <button>Randomise!</button>
+          <button onClick={randomButton}>Randomise!</button>
 
         </div>
     )

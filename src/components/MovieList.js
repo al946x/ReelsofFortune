@@ -1,11 +1,12 @@
 import React from 'react';
 
 const MovieList = (props) =>{
+    console.log(props.movie);
     return(
         <>
-         {props.movies.map((movie, index)=>
+         {props.movies.Search.map((movie, index)=>
           <div key={index} className='d-flex justify-content-start'>
-            <img src= {movie.Poster} alt='movie'></img>
+            <img src= {props.poster} alt='movie'></img>
          </div>)}
         </>
     )

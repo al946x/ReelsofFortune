@@ -6,26 +6,28 @@ import ListHeaders from "./components/ListHeaders";
 import Search from "./components/Search";
 
 function App() {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState();
+  
   // const [searchMovie, setSearchMovie] = useState('');
   const [randomMovie, setRandomMovie] = useState({});
 
   const getMovieRequest = async () => {
-    const url = "http://www.omdbapi.com/?s=star wars&apikey=91ef3dfe";
+    const url = "http://www.omdbapi.com/?s=starwars&apikey=91ef3dfe";
 
     const response = await fetch(url);
     const responseJson = await response.json();
-    let newMovies = JSON.parse(responseJson);
 
 
-    console.log(newMovies);
+    
     setMovies(responseJson);
 
-    const randomMovie =
-      responseJson.array.map[Math.floor(Math.random() * responseJson.length)];
+    const newRandomMovie =
+      responseJson.Search[Math.floor(Math.random() * responseJson.Search.length)];
 
+      
+    
+    setRandomMovie(newRandomMovie);
     console.log(randomMovie);
-    setRandomMovie(randomMovie);
   };
 
   useEffect(() => {
@@ -38,9 +40,13 @@ function App() {
         <ListHeaders headers="movies" />
       </div>
       <div className="row">
-        <MovieList movies={movies} />
+      { movies ? 
+
+      <MovieList movies={movies} poster={randomMovie.Poster} />
+
+      : <p>Loading</p> }
       </div>
-      <Search />
+      <Search randomMovie={randomMovie} movieRequest={getMovieRequest} />
     </div>
   );
 }
