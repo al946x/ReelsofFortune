@@ -34,7 +34,7 @@ body {
   border-radius: 10px;
   cursor: pointer;
   border: 1px solid var(--dark-variant);
-  color: var(--dark);
+  color: var(--white);
   background-color: var(--red);
   font-family: var(--font-family-text);
   font-size: 1.1rem;
@@ -45,7 +45,7 @@ body {
 
 .btn:hover {
   background: var(--pale-red);
-  color: var(--dark);
+  color: var(--white);
   border-color: transparent;
 }
 
