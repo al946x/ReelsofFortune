@@ -11,7 +11,7 @@ function Search(props) {
 
   return (
     <div>
-      <button className= 'btn' onClick={randomButton}>Randomise!</button>
+      <button className= 'btn' onClick={randomButton}>RANDOMISE!</button>
 
     </div>
   )
