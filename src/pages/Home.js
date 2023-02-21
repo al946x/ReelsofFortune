@@ -1,7 +1,7 @@
 import React from "react";
 import {useState, useEffect} from 'react';
 import RandomMovie from "../components/RandomMovie";
-import Search from "../components/Search";
+
 
 
 function Home() {
@@ -44,7 +44,7 @@ function Home() {
         <>
             <RandomMovie movies={movies} randomMovie={randomMovie} movieRequest={getMovieRequest} />
 
-            <Search movieRequest={getMovieRequest} />
+        
         </>
     )
 }

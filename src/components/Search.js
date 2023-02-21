@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 
 function Search(props) {
 
@@ -10,12 +9,12 @@ function Search(props) {
   }
 
 
-    return(
-        <div className='col col-sm-5'>
-          <button onClick={randomButton}>Randomise!</button>
+  return (
+    <div>
+      <button className= 'btn' onClick={randomButton}>Randomise!</button>
 
-        </div>
-    )
+    </div>
+  )
 }
 
 export default Search;

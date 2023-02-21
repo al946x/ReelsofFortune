@@ -5,7 +5,7 @@ const MovieList = (props) =>{
     return(
         
          
-        <div className='d-flex justify-content-start'>
+        <div className='movie-list-container'>
             <h3>{props.movieTitle}</h3>
             <img src= {props.poster} alt='movie'></img>
             <p>{props.year}</p>
