@@ -1,7 +1,7 @@
 import React from "react";
 import {useState, useEffect} from 'react';
+import {FaHeart} from "react-icons/fa";
 import RandomMovie from "../components/RandomMovie";
-
 
 
 function Home() {
@@ -41,6 +41,10 @@ function Home() {
 
     return(
         <>
+            <div className="fav-btn" style={{ textAlign: "center" }}>
+                <FaHeart />
+            </div>
+
             <RandomMovie movies={movies} randomMovie={randomMovie} movieRequest={getMovieRequest} />
 
         
