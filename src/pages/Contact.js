@@ -57,7 +57,7 @@ function Contact(props) {
 
         <p style={{ textAlign: "center", margin: "20px" }}>We'd love to hear your feedback!</p>
 
-        <div>
+        <div className= "contact-container">
           <form onSubmit={handleSubmit}>
             <input
               name="name"
@@ -81,7 +81,7 @@ function Contact(props) {
               cols="30"
               rows="10"
             ></textarea>
-            <button className="btn">Submit</button>
+            <button className="btn-form">Submit</button>
           </form>
         </div>
 

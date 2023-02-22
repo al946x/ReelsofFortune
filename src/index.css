@@ -43,7 +43,7 @@ body {
 
 }
 
-.btn:hover {
+.btn:hover, .btn-form:hover {
   background: var(--pale-red);
   color: var(--white);
   border-color: transparent;
@@ -114,4 +114,48 @@ p {
 .fav-btn {
   color: var(--red);
   margin: 20px;
+}
+
+.contact-container {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+form {
+  margin-top: .7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: .5rem;
+  background: transparent;
+  border: 3px solid var(--dark);
+  resize: none;
+  color: var(--white);
+  font: var(--font-family-text);
+
+}
+
+.btn-form {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid var(--dark);
+  color: var(--white);
+  background-color: var(--red);
+  font-family: var(--font-family-text);
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  margin-top: .5rem;
+  margin-left: auto;
+  margin-right: auto;
+
 }
