@@ -42,7 +42,7 @@ function Home() {
     return(
         <>
             <div className="fav-btn" style={{ textAlign: "center" }}>
-                <FaHeart />
+                <FaHeart size={25} />
             </div>
 
             <RandomMovie movies={movies} randomMovie={randomMovie} movieRequest={getMovieRequest} />
