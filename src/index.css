@@ -83,14 +83,6 @@ nav a:not(:last-child) {
 
 h2 {
   text-align: center;
-  font-family: var(--font-family-text);
-  margin-top: .5rem;
-  font-size: 1.75rem;
-}
-
-h3 {
-  font-family: var(--font-family-text);
-  font-size: 1rem;
 }
 
 
@@ -102,4 +94,9 @@ h3 {
     margin-top: '30px';
     border-radius: '6px';
     padding: '30px'
+}
+
+.fav-btn {
+  color: var(--red);
+  margin: 20px;
 }

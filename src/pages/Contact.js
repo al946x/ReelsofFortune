@@ -55,7 +55,7 @@ function Contact(props) {
       <div className="contact-page">
         <h2>Contact</h2>
 
-        <p style={{ textAlign: "center" }}>We'd love to hear your feedback!</p>
+        <p style={{ textAlign: "center", margin: "20px" }}>We'd love to hear your feedback!</p>
 
         <div>
           <form onSubmit={handleSubmit}>
