@@ -8,7 +8,7 @@ function RandomMovie(props) {
         <>
         {movies ? 
             <MovieList movies={props.movies} movieTitle={props.randomMovie.Title} poster={props.randomMovie.Poster} year={props.randomMovie.Year} />
-        : <p>Loading</p> }
+        : <p style={{textAlign: "center", margin: "20px"}}>Press RANDOMISE to find a movie to watch</p> }
 
             
         </>

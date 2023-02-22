@@ -10,7 +10,7 @@ function Search(props) {
 
 
   return (
-    <div>
+    <div className="random-btn">
       <button className= 'btn' onClick={randomButton}>RANDOMISE!</button>
 
     </div>
