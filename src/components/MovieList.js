@@ -6,9 +6,9 @@ const MovieList = (props) =>{
         
          
         <div className='movie-list-container'>
-            <h3 style={{ margin: "15px" }}>{props.movieTitle}</h3>
-            <img style={{ margin: "15px" }} src= {props.poster} alt='movie'></img>
-            <p style={{ margin: "15px" }}>{props.year}</p>
+            <h3 style={{ margin: "10px" }}>{props.movieTitle}</h3>
+            <img style={{ margin: "1px" }} src= {props.poster} alt='movie'></img>
+            <p style={{ margin: "5px" }}>{props.year}</p>
         </div>
         
         
