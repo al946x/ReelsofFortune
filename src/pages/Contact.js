@@ -53,7 +53,7 @@ function Contact(props) {
   return (
     <>
       <div className="contact-page">
-        <h1>Contact</h1>
+        <h2>Contact</h2>
 
         <p style={{ textAlign: "center" }}>We'd love to hear your feedback!</p>
 
