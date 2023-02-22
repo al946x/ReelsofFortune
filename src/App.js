@@ -2,7 +2,7 @@ import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 import './index.css';
 import Header from "./components/Header";
-import Favourites from "./pages/Favourites";
+// import Favourites from "./pages/Favourites";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 
@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
 
-        <Route path="/favourites" element={<Favourites />}></Route>
+        {/* <Route path="/favourites" element={<Favourites />}></Route> */}
 
         <Route path="/contact" element={<Contact />}></Route>
       </Routes>

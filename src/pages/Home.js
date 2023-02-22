@@ -1,7 +1,10 @@
 import React from "react";
 import {useState, useEffect} from 'react';
-import {FaHeart} from "react-icons/fa";
+// import {FaHeart} from "react-icons/fa";
 import RandomMovie from "../components/RandomMovie";
+import Search from "../components/Search";
+
+
 
 
 function Home() {
@@ -41,11 +44,13 @@ function Home() {
 
     return(
         <>
-            <div className="fav-btn" style={{ textAlign: "center" }}>
+          <Search movieRequest={getMovieRequest} />
+            {/* <div className="fav-btn" style={{ textAlign: "center" }}>
                 <FaHeart size={25} />
-            </div>
+            </div> */}
 
             <RandomMovie movies={movies} randomMovie={randomMovie} movieRequest={getMovieRequest} />
+          
 
         
         </>
