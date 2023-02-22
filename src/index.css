@@ -92,6 +92,10 @@ h3 {
   font-size: 1.75rem;
 }
 
+img {
+  border-radius: 10px;
+}
+
 p {
   font-size: 1.5rem;
 
