@@ -80,3 +80,17 @@ nav a:not(:last-child) {
 .movie-list-container {
   text-align: center;
 }
+
+h1 {
+  text-align: center;
+}
+
+.content-page {
+    padding: "50px";
+    margin-left: "50px";
+    margin-right: '50px';
+    margin-bottom: '20px';
+    margin-top: '30px';
+    border-radius: '6px';
+    padding: '30px'
+}
