@@ -54,9 +54,9 @@ function Header () {
             <Search movieRequest={getMovieRequest} />
    
             <nav className= 'nav-bar'>
-                <NavLink to="/"><AiOutlineHome/></NavLink>
-                <NavLink to="/favourites"><BsSuitHeart/></NavLink>
-                <NavLink to="/contact"><RiContactsBook2Line/></NavLink>
+                <NavLink to="/"><AiOutlineHome size={25}/></NavLink>
+                <NavLink to="/favourites"><BsSuitHeart size={25}/></NavLink>
+                <NavLink to="/contact"><RiContactsBook2Line size={25}/></NavLink>
             </nav>
             </div>
         </header>
