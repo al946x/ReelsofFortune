@@ -38,9 +38,9 @@ function Home() {
         console.log(randomMovie);
     };
 
-    useEffect(() => {
-        getMovieRequest();
-    }, []);
+    // useEffect(() => {
+    //     getMovieRequest();
+    // }, []);
 
     return(
         <>
@@ -49,7 +49,7 @@ function Home() {
                 <FaHeart size={25} />
             </div> */}
 
-            <RandomMovie movies={movies} randomMovie={randomMovie} movieRequest={getMovieRequest} />
+            {randomMovie && <RandomMovie movies={movies} randomMovie={randomMovie} movieRequest={getMovieRequest} />}
           
 
         
