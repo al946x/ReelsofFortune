@@ -35,13 +35,13 @@ To run React, run npm start.
 
   ## Collaborators
   
-  Tamzin Chikhalia https://github.com/TamzinC
+  [Tamzin Chikhalia](https://github.com/TamzinC)
 
-  Alina Ali https://github.com/al946x
+  [Alina Ali](https://github.com/al946x)
 
-  Tasmiah Begum https://github.com/tasmiah22
+  [Tasmiah Begum](https://github.com/tasmiah22)
 
-  Lotus Tay https://github.com/lotus-pocus
+  [Lotus Tay](https://github.com/lotus-pocus)
   
 
 
