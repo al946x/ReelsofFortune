@@ -19,7 +19,7 @@ function Home() {
         
         const randomSelector = movieArray[Math.floor(Math.random() * movieArray.length)];
 
-        const url = `http://www.omdbapi.com/?s=${randomSelector}&apikey=91ef3dfe`;
+        const url = `https://www.omdbapi.com/?s=${randomSelector}&apikey=91ef3dfe`;;
 
         const response = await fetch(url);
         const responseJson = await response.json();
