@@ -34,10 +34,13 @@ To run React, run npm start.
   <img src =./src/images/02randompick.png>
 
   ## Collaborators
-  https://github.com/TamzinC
-  https://github.com/al946x
-  https://github.com/tasmiah22
-  https://github.com/lotus-pocus
+  
+  [Tamzin Chikhalia] (https://github.com/TamzinC)
+  [Alina Ali] (https://github.com/al946x)
+  [Tasmiah Begum] (https://github.com/tasmiah22)
+  [Lotus Tay] (https://github.com/lotus-pocus)
+  
+
 
   ## License
   The license for this project is MIT
